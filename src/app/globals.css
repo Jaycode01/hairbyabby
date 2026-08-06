@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@import "@fontsource/fraunces/400.css";
+@import "@fontsource/fraunces/500.css";
+@import "@fontsource/fraunces/600.css";
+@import "@fontsource/fraunces/400-italic.css";
+@import "@fontsource/fraunces/300-italic.css";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+
+:root {
+  --ink: #211f21;
+  --charcoal: #555358;
+  --dim: #5f6062;
+  --taupe: #7b7263;
+  --sand: #c6ca53;
+  --sand-deep: #a9ac3f;
+  --sage: #c9dcb3;
+  --sage-deep: #a9c187;
+  --cream: #f7f5ef;
+  --cream-deep: #efece2;
+}
+
+@theme inline {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-dim: var(--dim);
+  --color-taupe: var(--taupe);
+  --color-sand: var(--sand);
+  --color-sand-deep: var(--sand-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--sand-deep);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Strand motif line — signature element */
+.strand-path {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: strand-draw 2.2s ease-out forwards;
+}
+
+@keyframes strand-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strand-path {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+
+/* Marquee */
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
