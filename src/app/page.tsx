@@ -28,22 +28,22 @@ const favourites = [
   {
     name: "The Bella Bob",
     price: "₦52,000",
-    image: "/bella-bob.jfif",
+    image: "/bella-bob.png",
   },
   {
     name: "Silk Press Closure",
     price: "₦68,000",
-    image: "/silk-press-closure.jfif",
+    image: "/silk-press-closure.png",
   },
   {
     name: "Body Wave Clip-Ins",
     price: "₦24,000",
-    image: "/body-wave.jfif",
+    image: "/body-wave.png",
   },
   {
     name: "The Abby Lace Front",
     price: "₦89,000",
-    image: "/abby-lace.jfif",
+    image: "/abby-lace.png",
   },
 ];
 
