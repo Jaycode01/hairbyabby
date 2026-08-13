@@ -50,7 +50,7 @@ export default function AboutPage() {
               </p>
             </div>
             <Image
-              src="/aout-studio.jfif"
+              src="/aout-studio.png"
               alt="Hairbyabby fitting session in the studio"
               width={900}
               height={1125}
