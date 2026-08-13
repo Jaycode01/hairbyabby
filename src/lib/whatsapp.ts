@@ -1,7 +1,6 @@
 import { CartItem } from "@/context/CartContext";
 import { formatNaira } from "@/data/products";
 
-// Replace with the real Hairbyabby WhatsApp number (digits only, country code, no +)
 export const WHATSAPP_NUMBER = "2340000000000";
 
 export function buildCartWhatsAppLink(
